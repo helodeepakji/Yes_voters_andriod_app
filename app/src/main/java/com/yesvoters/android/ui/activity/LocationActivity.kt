@@ -15,6 +15,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.yesvoters.android.R
 import com.yesvoters.android.database.AppSharedPreferences
 import com.yesvoters.android.databinding.ActivityLocationBinding
 import com.yesvoters.android.ui.base.BaseActivity
@@ -57,7 +58,7 @@ class LocationActivity : BaseActivity() {
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) -> {
-                showToast("Location permission is needed to proceed.")
+                showToast(getString(R.string.location_permission_required))
                 ActivityCompat.requestPermissions(
                     this,
                     arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
@@ -66,7 +67,6 @@ class LocationActivity : BaseActivity() {
             }
 
             else -> {
-                // Permission denied with "Don't ask again"
                 ActivityCompat.requestPermissions(
                     this,
                     arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
@@ -84,7 +84,7 @@ class LocationActivity : BaseActivity() {
         if (isEnabled) {
             getLastKnownLocation()
         } else {
-            Toast.makeText(this, "Please enable location services", Toast.LENGTH_LONG).show()
+            showToast(getString(R.string.enable_location_services))
             startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
         }
     }
@@ -97,20 +97,19 @@ class LocationActivity : BaseActivity() {
                     val longitude = location.longitude
 
                     AppSharedPreferences.setLatitude(latitude.toString())
-                    AppSharedPreferences.setLongitude(longitude.toString()) // ✅ Corrected
+                    AppSharedPreferences.setLongitude(longitude.toString())
 
                     getAddressFromLocation(latitude, longitude)
                 } else {
-                    Toast.makeText(
-                        this,
-                        "Unable to detect location. Please try again.",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    showToast(
+                        getString(R.string.location_unavailable)
+                    )
                     loadNextScreen()
                 }
             }
             .addOnFailureListener {
-                Toast.makeText(this, "Location fetch failed", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.location_fetch_failed), Toast.LENGTH_SHORT)
+                    .show()
                 loadNextScreen()
             }
     }
@@ -141,13 +140,13 @@ class LocationActivity : BaseActivity() {
                     Postal Code: ${address.postalCode ?: "N/A"}
                 """.trimIndent()
 
-                Toast.makeText(this, addressText, Toast.LENGTH_LONG).show()
+                showToast(addressText)
             } else {
-                Toast.makeText(this, "No address found", Toast.LENGTH_SHORT).show()
+                showToast(getString(R.string.no_address_found))
             }
         } catch (e: IOException) {
             e.printStackTrace()
-            Toast.makeText(this, "Unable to retrieve address", Toast.LENGTH_SHORT).show()
+            showToast(getString(R.string.address_retrieval_failed))
         } finally {
             loadNextScreen()
         }
@@ -169,15 +168,10 @@ class LocationActivity : BaseActivity() {
                 )
 
                 if (permanentlyDenied) {
-                    Toast.makeText(
-                        this,
-                        "Location permission permanently denied",
-                        Toast.LENGTH_LONG
-                    )
-                        .show()
+                    showToast(getString(R.string.location_permission_permanently_denied))
                     openAppSettings()
                 } else {
-                    Toast.makeText(this, "Location permission denied", Toast.LENGTH_SHORT).show()
+                    showToast(getString(R.string.location_permission_denied))
                     finish()
                 }
             }

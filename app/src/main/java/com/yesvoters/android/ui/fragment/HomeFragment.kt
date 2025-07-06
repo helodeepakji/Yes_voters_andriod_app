@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.yesvoters.android.R
 import com.yesvoters.android.database.UserPreferences
 import com.yesvoters.android.databinding.FragmentHomeBinding
 import com.yesvoters.android.network.remote.Status
@@ -23,6 +24,7 @@ import com.yesvoters.android.ui.model.response.SurveyAssignment
 import com.yesvoters.android.ui.model.response.SurveySearchResponse
 import com.yesvoters.android.ui.model.response.SurveySummaryResponse
 import com.yesvoters.android.ui.viewModel.SurveyViewModel
+import com.yesvoters.android.utils.AppConstants
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -72,7 +74,7 @@ class HomeFragment : BaseFragment() {
 
         adapter = SearchSurveyAdapter(surveyList) { clickedSurvey ->
             val intent = Intent(requireContext(), SurveyOnBoardingActivity::class.java)
-            intent.putExtra("clicked_survey", clickedSurvey)
+            intent.putExtra(AppConstants.ARG_CLICKED_SURVEY, clickedSurvey)
             startActivity(intent)
         }
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -237,7 +239,7 @@ class HomeFragment : BaseFragment() {
     private fun handleSearchInError(response: SurveySearchResponse?) {
         surveyList = emptyList()
         adapter.updateList(surveyList)
-        showToast("Something went wrong. Please try again.")
+        showToast(getString(R.string.something_went_wrong),)
     }
 
     private fun getMySurveyList() {

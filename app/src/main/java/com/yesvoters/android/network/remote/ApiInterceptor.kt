@@ -83,7 +83,6 @@ class APIInterceptor constructor(
                 refreshApiCounter = true
                 callingRequest = request
                 Log.w(TAG, "403 Forbidden – Token might need refresh.")
-                // Optionally trigger token refresh here
             }
 
             response

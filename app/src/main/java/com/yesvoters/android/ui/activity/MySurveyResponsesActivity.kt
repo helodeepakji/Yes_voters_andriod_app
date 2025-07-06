@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.yesvoters.android.R
 import com.yesvoters.android.databinding.ActivityMySurveyResponsesBinding
 import com.yesvoters.android.network.remote.Status
 import com.yesvoters.android.ui.adaptor.SurveyResponseAdapter
@@ -27,7 +28,7 @@ class MySurveyResponsesActivity : BaseActivity() {
 
         setContentView(binding.root)
 
-        binding.header.tvHeading.text = "My Survey Responses"
+        binding.header.tvHeading.text = getString(R.string.my_survey_responses)
 
         getMySurveyResponse()
 
@@ -60,7 +61,7 @@ class MySurveyResponsesActivity : BaseActivity() {
     }
 
     private fun handleError(response: MyResponseApiResponse?) {
-        showToast(response?.message ?: "Something went wrong")
+        showToast(response?.message ?:getString(R.string.something_went_wrong))
     }
 
     private fun handleResponse(response: MyResponseApiResponse?) {

@@ -4,8 +4,7 @@
     // Internet
     <string name="please_check_your_internet_connection_try_again">Please check your internet connection and try again.</string>
     <string name="something_went_wrong">Something went wrong.</string>
-    <string name="unexpected_error">Unexpected error</string>
-
+    <string name="unexpected_error">Unexpected error occurred</string>
 
     // Login Screen
     <string name="hint_text_email_phone">Email or Username</string>
@@ -20,11 +19,30 @@
     <string name="error_login">Error Login</string>
     <string name="please_enter_the_password">Please Enter the password</string>
     <string name="please_enter_the_email">Please Enter the email</string>
+    <string name="please_accept_terms">Please accept Terms and Privacy Policy</string>
+    <string name="logging_in">Logging in...</string>
+    <string name="google_signin_clicked">Google Sign-In clicked</string>
+    <string name="terms_and_policy_label">By proceeding, you acknowledge that you have read and agree to our Terms and Privacy Policy.</string>
 
     // Location Screen
     <string name="enable_location_access_text">Enable Location Access</string>
     <string name="we_tag_gps_coordinates_to_text">We tag GPS coordinates to verify survey locations. This ensures transparency and credibility.</string>
     <string name="button_text_allow_gps_access">Allow GPS Access</string>
+    <string name="location_permission_required">Location permission is needed to proceed.</string>
+    <string name="enable_location_services">Please enable location services</string>
+    <string name="location_unavailable">Unable to detect location. Please try again.</string>
+    <string name="location_fetch_failed">Location fetch failed</string>
+    <string name="no_address_found">No address found</string>
+    <string name="address_retrieval_failed">Unable to retrieve address</string>
+    <string name="location_permission_denied">Location permission denied</string>
+    <string name="location_permission_permanently_denied">Location permission permanently denied</string>
+    <string name="address_format">
+        Address: %1$s
+        City: %2$s
+        State: %3$s
+        Country: %4$s
+        Postal Code: %5$s
+    </string>
 
     // Profile
     <string name="profile_heading_text">My Profile</string>
@@ -39,6 +57,10 @@
     <string name="security_text">Security</string>
     <string name="change_password_text">Change Your Password ></string>
     <string name="log_out_text">Log Out</string>
+    <string name="no_image_selected">No image selected</string>
+    <string name="change_password_with_icon">Change Your Password %icon%</string>
+    <string name="something_went_wrong_fetching_profile">Something went wrong while fetching profile</string>
+    <string name="profile_update_failed">Profile update failed</string>
 
     // Begin Survey
     <string name="begin_survey_text">Begin Survey</string>
@@ -76,9 +98,20 @@ Make sure the respondent is present and has given verbal consent.</string>
     <string name="enter_state">Please enter your state</string>
     <string name="enter_postal_code">Please enter your postal code</string>
 
-
     <string name="logout_confirmation_message">Are you sure you want to logout?</string>
     <string name="logout_cancelled">Logout cancelled</string>
     <string name="logout_failed">Logout failed</string>
     <string name="guest_user">Guest user</string>
+
+    //Change Password
+    <string name="please_enter_old_password">Please enter old password</string>
+    <string name="please_enter_new_password">Please enter new password</string>
+    <string name="password_min_length">Password must be at least 6 characters</string>
+    <string name="please_confirm_password">Please confirm your password</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="session_expired">Session expired. Please login again.</string>
+
+    // My Survey Screen
+    <string name="my_survey_responses">My Survey Responses</string>
+
 </resources>

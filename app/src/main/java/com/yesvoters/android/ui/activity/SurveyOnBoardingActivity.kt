@@ -7,6 +7,7 @@ import com.yesvoters.android.services.AudioRecorderService
 import com.yesvoters.android.ui.base.BaseActivity
 import com.yesvoters.android.ui.fragment.BeginSurveyFragment
 import com.yesvoters.android.ui.model.response.SurveyAssignment
+import com.yesvoters.android.utils.AppConstants
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,10 +21,11 @@ class SurveyOnBoardingActivity : BaseActivity() {
         binding = ActivitySurveyOnBoardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val surveyAssignment = intent.getParcelableExtra<SurveyAssignment>("clicked_survey")
+        val surveyAssignment =
+            intent.getParcelableExtra<SurveyAssignment>(AppConstants.ARG_CLICKED_SURVEY)
         val fragment = BeginSurveyFragment()
         val bundle = Bundle()
-        bundle.putParcelable("clicked_survey", surveyAssignment)
+        bundle.putParcelable(AppConstants.ARG_CLICKED_SURVEY, surveyAssignment)
         fragment.arguments = bundle
 
         if (savedInstanceState == null) {

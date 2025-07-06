@@ -38,7 +38,6 @@ class ProfileActivity : BaseActivity() {
 
     lateinit var uri: Uri
 
-    // ✅ Image Picker Launcher (no permission needed Android 13+)
     private val pickImageLauncher = registerForActivityResult(
         ActivityResultContracts.PickVisualMedia()
     ) { uri ->
@@ -47,7 +46,7 @@ class ProfileActivity : BaseActivity() {
             binding.imageProfile.setImageURI(uri)
             viewModel.callProfileApi(uriToFile(this, uri))
         } else {
-            showToast("No image selected")
+            showToast(getString(R.string.no_image_selected))
         }
     }
 
@@ -273,11 +272,11 @@ class ProfileActivity : BaseActivity() {
     }
 
     private fun handleUserDataError(response: UserResponse?) {
-        showToast("Something went wrong while fetching profile")
+        showToast(getString(R.string.something_went_wrong_fetching_profile))
     }
 
     private fun handleProfileError(response: UpdateProfileResponse?) {
-        showToast(response?.message ?: "Profile update failed")
+        showToast(response?.message ?: getString(R.string.profile_update_failed))
     }
 
 
@@ -315,7 +314,7 @@ class ProfileActivity : BaseActivity() {
 
 
     private fun updateDataToServer() {
-        viewModel.callProfileApi( getUpdateProfileRequest())
+        viewModel.callProfileApi(getUpdateProfileRequest())
     }
 
     private fun getUpdateProfileRequest(): UpdateProfileRequest {

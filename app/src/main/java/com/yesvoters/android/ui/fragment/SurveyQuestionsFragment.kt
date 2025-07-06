@@ -83,7 +83,7 @@ class SurveyQuestionsFragment : BaseFragment() {
 
     }
 
-    private fun getQuestionsList(id:Int) {
+    private fun getQuestionsList(id: Int) {
         viewModel.callSurveyQuestionApi(id)
     }
 
@@ -114,18 +114,15 @@ class SurveyQuestionsFragment : BaseFragment() {
 
             withContext(Dispatchers.Main) {
                 if (!stable || file == null) {
-                    Toast.makeText(requireContext(), "Audio file not ready", Toast.LENGTH_SHORT)
-                        .show()
+                    showToast("Audio file not ready")
                     return@withContext
                 }
 
                 val extension = file!!.extension.lowercase()
                 if (extension !in listOf("mp3", "wav", "ogg", "m4a")) {
-                    Toast.makeText(
-                        requireContext(),
-                        "Invalid audio format: .$extension",
-                        Toast.LENGTH_LONG
-                    ).show()
+                    showToast(
+                        "Invalid audio format: .$extension"
+                    )
                     return@withContext
                 }
 
@@ -253,7 +250,7 @@ class SurveyQuestionsFragment : BaseFragment() {
     }
 
     private fun handleErrorResponse(response: SurveyQuestionResponse?) {
-        Toast.makeText(requireContext(), "Failed to load questions", Toast.LENGTH_SHORT).show()
+        showToast("Failed to load questions")
     }
 
     private fun handleQuestionResponse(response: SurveyQuestionResponse?) {
@@ -264,10 +261,9 @@ class SurveyQuestionsFragment : BaseFragment() {
             binding.recyclerView.adapter = adapter
             binding.recyclerView.expandFully()
         } else {
-            Toast.makeText(requireContext(), "No questions available", Toast.LENGTH_SHORT).show()
+            showToast("No questions available")
         }
 
     }
-
 
 }

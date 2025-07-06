@@ -14,5 +14,13 @@ object AppConstants {
     const val ARG_STATE = "state"
     const val ARG_POSTAL_CODE = "postal_code"
 
+    const val LATITUDE = "latitude"
+    const val LONGITUDE = "longitude"
+    const val FULL_NAME = "full_name"
+    const val EMAIL_ID = "email_id"
+    const val USER_TOKEN = "user_token"
+    const val PROFILE = "profile"
+    const val PHONE = "phone"
+
 
 }

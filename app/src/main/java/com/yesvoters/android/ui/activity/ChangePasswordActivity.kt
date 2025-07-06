@@ -37,27 +37,27 @@ class ChangePasswordActivity : BaseActivity() {
 
             when {
                 oldPassword.isEmpty() -> {
-                    showToast("Please enter old password")
+                    showToast(getString(R.string.please_enter_old_password))
                     binding.etOldPassword.requestFocus()
                 }
 
                 newPassword.isEmpty() -> {
-                    showToast("Please enter new password")
+                    showToast(getString(R.string.please_enter_new_password))
                     binding.etPassword.requestFocus()
                 }
 
                 newPassword.length < 6 -> {
-                    showToast("Password must be at least 6 characters")
+                    showToast(getString(R.string.password_min_length))
                     binding.etPassword.requestFocus()
                 }
 
                 confirmPassword.isEmpty() -> {
-                    showToast("Please confirm your password")
+                    showToast(getString(R.string.please_confirm_password))
                     binding.etConformPassword.requestFocus()
                 }
 
                 newPassword != confirmPassword -> {
-                    showToast("Passwords do not match")
+                    showToast(getString(R.string.passwords_do_not_match))
                     binding.etConformPassword.requestFocus()
                 }
 
@@ -72,7 +72,7 @@ class ChangePasswordActivity : BaseActivity() {
     private fun changePasswordApi() {
         val token = UserPreferences.getUserToken()
         if (token.isEmpty()) {
-            showToast("Session expired. Please login again.")
+            showToast(getString(R.string.session_expired))
             startActivity(Intent(this, LoginActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             })
@@ -133,6 +133,5 @@ class ChangePasswordActivity : BaseActivity() {
     private fun handleChangePasswordError(response: ChangePasswordResponse?) {
         showToast(response?.message ?: getString(R.string.something_went_wrong))
     }
-
 
 }

@@ -16,6 +16,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.yesvoters.android.R
 import com.yesvoters.android.database.AppSharedPreferences
 import com.yesvoters.android.database.UserPreferences
 import com.yesvoters.android.databinding.FragmentBeginSurveyBinding
@@ -204,11 +205,11 @@ class BeginSurveyFragment : BaseFragment() {
                 val address = addresses[0]
                 binding.tvLocation.text = address.locality
             } else {
-                Toast.makeText(requireContext(), "No address found", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.no_address_found), Toast.LENGTH_SHORT).show()
             }
         } catch (e: IOException) {
             e.printStackTrace()
-            Toast.makeText(requireContext(), "Unable to retrieve address", Toast.LENGTH_SHORT)
+            Toast.makeText(requireContext(), getString(R.string.address_retrieval_failed), Toast.LENGTH_SHORT)
                 .show()
         }
     }

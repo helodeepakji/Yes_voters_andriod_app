@@ -54,7 +54,7 @@ class LoginActivity : BaseActivity() {
     private fun checkValidation(): Boolean {
         val emailValid = checkNull(binding.etEmail)
         val pwdValid = checkNull(binding.etPassword)
-        if (!(emailValid)) {
+        if (!emailValid) {
             showToast(getString(R.string.please_enter_the_email))
             return false
         }
@@ -69,10 +69,7 @@ class LoginActivity : BaseActivity() {
         viewModel.getLoginResponse().observe(this) { res ->
             val response = res.data
             when (res.status) {
-                Status.LOADING -> {
-                    progressBarHideShow(true)
-                }
-
+                Status.LOADING -> progressBarHideShow(true)
                 Status.SUCCESS -> {
                     progressBarHideShow(false)
                     handleSignInResponse(response)
@@ -91,7 +88,8 @@ class LoginActivity : BaseActivity() {
             showToast(getString(R.string.unexpected_error))
             return
         }
-            if (response.success) {
+
+        if (response.success) {
             UserPreferences.saveUserData(response.user)
             UserPreferences.saveUserToken(response.token)
             checkLocationPermission()
@@ -101,19 +99,18 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun checkLocationPermission() {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-            == PackageManager.PERMISSION_GRANTED
-        ) {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
-        } else {
-            val intent = Intent(this, LocationActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            finish()
-        }
+        val intent =
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED
+            ) {
+                Intent(this, MainActivity::class.java)
+            } else {
+                Intent(this, LocationActivity::class.java)
+            }
+
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
     }
 
     private fun handleSignInError(response: LoginResponse?) {
@@ -132,7 +129,6 @@ class LoginActivity : BaseActivity() {
         setContentView(binding.root)
     }
 
-
     private fun setupListeners() {
         binding.btnLogin.setOnClickListener {
             val email = binding.etEmail.text?.trim()?.toString() ?: ""
@@ -141,15 +137,17 @@ class LoginActivity : BaseActivity() {
             val agreedToTerms = binding.checkboxTerms.isChecked
 
             if (!agreedToTerms) {
-                showToast("Please accept Terms and Privacy Policy")
+                showToast(getString(R.string.please_accept_terms))
                 return@setOnClickListener
             }
+
             callLoginApi()
-            Toast.makeText(this, "Logging in...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.logging_in), Toast.LENGTH_SHORT).show()
         }
 
         binding.btnGoogle.setOnClickListener {
-            Toast.makeText(this, "Google Sign-In clicked", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(R.string.google_signin_clicked), Toast.LENGTH_SHORT)
+                .show()
         }
     }
 
@@ -167,7 +165,7 @@ class LoginActivity : BaseActivity() {
 
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(widget: View) {
-                Toast.makeText(this@LoginActivity, "Terms clicked!", Toast.LENGTH_SHORT).show()
+                showToast("Terms clicked!")
             }
 
             override fun updateDrawState(ds: TextPaint) {
