@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_screen_bg_color"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/ibBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:src="@drawable/back_icon" />
+
+            <com.yesvoters.android.customview.RobotoSemiBoldTextView
+                android:id="@+id/tvHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/profile_heading_text"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_24"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_16"
+            android:padding="@dimen/dp_1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_image_vertical"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:strokeColor="@android:color/darker_gray"
+            app:strokeWidth="@dimen/dp_1" />
+
+        <com.yesvoters.android.customview.RobotoMediumTextView
+            android:id="@+id/tvAddProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="@string/add_profile_picture_text"
+            android:textColor="@color/app_button_bg_color"
+            android:textSize="@dimen/text_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/horizontal_line_30_color" />
+
+        <!-- Section Header -->
+        <com.yesvoters.android.customview.RobotoSemiBoldTextView
+            android:id="@+id/tvPersonalDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="@string/personal_details_text"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold" />
+
+        <!-- Full Name -->
+        <com.yesvoters.android.customview.RobotoRegularTextView
+            android:id="@+id/tvFullNameLabel"
+            style="@style/ProfileLabel"
+            android:text="@string/full_name_text" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etFullNameValue"
+                style="@style/ProfileValue"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toStartOf="@+id/ibEditFullName" />
+
+            <ImageButton
+                android:id="@+id/ibEditFullName"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="Edit"
+                android:src="@drawable/edit_icon" />
+        </RelativeLayout>
+
+        <!-- Phone Number -->
+        <com.yesvoters.android.customview.RobotoRegularTextView
+            android:id="@+id/tvPhoneLabel"
+            style="@style/ProfileLabel"
+            android:text="Phone Number" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etPhoneValue"
+                style="@style/ProfileValue"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toStartOf="@+id/ibEditPhone" />
+
+            <ImageButton
+                android:id="@+id/ibEditPhone"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="Edit"
+                android:src="@drawable/edit_icon" />
+        </RelativeLayout>
+
+        <!-- Email -->
+        <com.yesvoters.android.customview.RobotoRegularTextView
+            android:id="@+id/tvEmailLabel"
+            style="@style/ProfileLabel"
+            android:text="Email Address" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etEmailValue"
+                style="@style/ProfileValue"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toStartOf="@+id/ibEditEmail" />
+
+            <ImageButton
+                android:id="@+id/ibEditEmail"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="Edit"
+                android:src="@drawable/edit_icon" />
+        </RelativeLayout>
+
+        <!-- Gender -->
+        <com.yesvoters.android.customview.RobotoRegularTextView
+            android:id="@+id/tvGenderLabel"
+            style="@style/ProfileLabel"
+            android:text="Gender" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etGenderValue"
+                style="@style/ProfileValue"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toStartOf="@+id/ibEditGender" />
+
+            <ImageButton
+                android:id="@+id/ibEditGender"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="Edit"
+                android:src="@drawable/edit_icon" />
+        </RelativeLayout>
+
+        <!-- Gender -->
+        <com.yesvoters.android.customview.RobotoRegularTextView
+            android:id="@+id/tvGenderBio"
+            style="@style/ProfileLabel"
+            android:text="Bio" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etBioValue"
+                style="@style/ProfileValue"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toStartOf="@+id/ibEditBio" />
+
+            <ImageButton
+                android:id="@+id/ibEditBio"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="Edit"
+                android:src="@drawable/edit_icon" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/black" />
+        <!-- Section: Security -->
+        <com.yesvoters.android.customview.RobotoSemiBoldTextView
+            android:id="@+id/tvSecurityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/security_text"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_24"
+            android:textStyle="bold" />
+
+        <com.yesvoters.android.customview.RobotoRegularTextView
+            android:id="@+id/tvChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:text="@string/change_password_text"
+            android:textColor="@color/app_text_color"
+            android:textSize="@dimen/text_16" />
+
+        <!-- Logout Button -->
+        <com.yesvoters.android.customview.RobotoMediumButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/button_rounded_border"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="@dimen/dp_10"
+            android:text="@string/log_out_text"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+</ScrollView>

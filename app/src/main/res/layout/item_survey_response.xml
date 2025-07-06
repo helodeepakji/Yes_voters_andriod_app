@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:appProfile="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_110"
+    android:layout_marginHorizontal="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_10"
+    card_view:cardCornerRadius="@dimen/dp_8"
+    card_view:cardElevation="@dimen/dp_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp_10"
+        android:paddingVertical="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Left Side: Survey Details -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:orientation="vertical">
+
+                <com.yesvoters.android.customview.RobotoMediumTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/app_text_color"
+                    android:textSize="@dimen/text_16" />
+
+                <com.yesvoters.android.customview.RobotoMediumTextView
+                    android:id="@+id/tvSurveyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#212121"
+                    android:textSize="@dimen/text_16" />
+
+                <com.yesvoters.android.customview.RobotoRegularTextView
+                    android:id="@+id/tvDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/text_12" />
+
+                <com.yesvoters.android.customview.RobotoRegularTextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="Mansarovar, Jaipur"
+                    android:textColor="#3F51B5"
+                    android:textSize="@dimen/dp_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivMic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mic_icon_blue" />
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:visibility="gone"
+                    android:id="@+id/audioControlsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtCurrentTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00" />
+
+                    <ImageView
+                        android:id="@+id/btnPlayPause"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:backgroundTint="@color/app_blue_color"
+                        android:src="@drawable/exo_icon_play"
+                        app:tint="@color/app_blue_color" />
+
+                    <TextView
+                        android:id="@+id/txtTotalDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00" />
+                </LinearLayout>
+
+                <com.yesvoters.android.customview.RobotoRegularTextView
+                    android:id="@+id/tvRecordDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#757575"
+                    android:textSize="@dimen/text_12" />
+
+                <com.yesvoters.android.customview.RobotoMediumTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submitted"
+                    android:textColor="#00B60C"
+                    android:textSize="@dimen/text_12" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

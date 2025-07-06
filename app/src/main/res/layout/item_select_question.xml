@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_15"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    >
+
+    <com.yesvoters.android.customview.RobotoRegularTextView
+        android:id="@+id/questionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:drawableEnd="@drawable/ic_down_arrow"
+        android:drawablePadding="@dimen/dp_8"
+        android:textColor="@color/app_black_color"
+        android:textSize="@dimen/text_18" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:overScrollMode="never"/>
+
+</LinearLayout>

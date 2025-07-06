@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Yes Voters</string>
+
+    // Internet
+    <string name="please_check_your_internet_connection_try_again">Please check your internet connection and try again.</string>
+    <string name="something_went_wrong">Something went wrong.</string>
+    <string name="unexpected_error">Unexpected error</string>
+
+
+    // Login Screen
+    <string name="hint_text_email_phone">Email or Username</string>
+    <string name="hint_text_enter_your_password">Enter your password</string>
+    <string name="remember_me_text">&#160;Remember me on this device</string>
+    <string name="login_to_take_text">Login to take part in the surveys</string>
+    <string name="lets_get_started_text">Let’s Get Started</string>
+    <string name="or_text">OR</string>
+    <string name="continue_with_google_text">Continue with Google</string>
+    <string name="by_proceeding_text">By proceeding, you acknowledge that you have read and agree to our Terms and Privacy Policy.</string>
+    <string name="button_text_login">Login</string>
+    <string name="error_login">Error Login</string>
+    <string name="please_enter_the_password">Please Enter the password</string>
+    <string name="please_enter_the_email">Please Enter the email</string>
+
+    // Location Screen
+    <string name="enable_location_access_text">Enable Location Access</string>
+    <string name="we_tag_gps_coordinates_to_text">We tag GPS coordinates to verify survey locations. This ensures transparency and credibility.</string>
+    <string name="button_text_allow_gps_access">Allow GPS Access</string>
+
+    // Profile
+    <string name="profile_heading_text">My Profile</string>
+    <string name="add_profile_picture_text">Add Profile Picture</string>
+    <string name="personal_details_text">Personal Details</string>
+    <string name="full_name_text">Full Name</string>
+    <string name="phone_number_text">Phone Number</string>
+    <string name="email_address_text">Email Address</string>
+    <string name="age_text">Age</string>
+    <string name="gender_text">Gender</string>
+    <string name="location_text">Location</string>
+    <string name="security_text">Security</string>
+    <string name="change_password_text">Change Your Password ></string>
+    <string name="log_out_text">Log Out</string>
+
+    // Begin Survey
+    <string name="begin_survey_text">Begin Survey</string>
+    <string name="begin_description_text">Description:</string>
+    <string name="start_survey_text">Start Survey</string>
+    <string name="surveyor_name_text">Survey Name:</string>
+    <string name="assigner_name_text">Assigner Name:</string>
+    <string name="surveyor_id_text">Survey ID:</string>
+    <string name="assign_date_time_text">Assign Date &amp; Time:</string>
+    <string name="surveyor_time_text">Surveyor Time:</string>
+    <string name="surveyor_location_text">Survey Location:</string>
+    <string name="please_verify_your_identity_text">Please verify your identity and location before beginning.
+Make sure the respondent is present and has given verbal consent.</string>
+    <string name="i_confirm_that_i_am_at_text">I confirm that I am at the correct location and ready to begin the survey.</string>
+
+    //Begin Fragment
+    <string name="basic_details">Basic Details</string>
+    <string name="your_name">Your name</string>
+    <string name="father_name">Father’s Name</string>
+    <string name="address">Address</string>
+    <string name="area_hint">Area (e.g. Ward 5, Gandhi Nagar)</string>
+    <string name="block_hint">Block (e.g Block A)</string>
+    <string name="landmark_hint">Landmark (Optional)</string>
+    <string name="city_hint">City</string>
+    <string name="state_hint">State</string>
+    <string name="postal_code_hint">Postal Code</string>
+    <string name="fill_required_fields">*Please fill in all required fields before proceeding.</string>
+    <string name="next">Next</string>
+
+    <string name="enter_your_name">Please enter your name</string>
+    <string name="enter_father_name">Please enter your father’s name</string>
+    <string name="enter_area">Please enter your area</string>
+    <string name="enter_block">Please enter your block</string>
+    <string name="enter_city">Please enter your city</string>
+    <string name="enter_state">Please enter your state</string>
+    <string name="enter_postal_code">Please enter your postal code</string>
+
+
+    <string name="logout_confirmation_message">Are you sure you want to logout?</string>
+    <string name="logout_cancelled">Logout cancelled</string>
+    <string name="logout_failed">Logout failed</string>
+    <string name="guest_user">Guest user</string>
+</resources>

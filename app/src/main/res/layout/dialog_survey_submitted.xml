@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/dp_20"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_35">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_300"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/is_survey_submitted" />
+
+        <com.yesvoters.android.customview.RobotoSemiBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dp_40"
+            android:text="Survey Submitted Successfully!"
+            android:textColor="#3F51B5"
+            android:textSize="@dimen/text_24" />
+    </LinearLayout>
+
+</FrameLayout>

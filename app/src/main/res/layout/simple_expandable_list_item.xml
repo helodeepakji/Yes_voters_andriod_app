@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/dp_12">
+
+    <TextView
+        android:id="@+id/groupTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Group Title"
+        android:textSize="@dimen/text_16"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/groupIndicator"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:src="@drawable/down_arrow" />
+</LinearLayout>

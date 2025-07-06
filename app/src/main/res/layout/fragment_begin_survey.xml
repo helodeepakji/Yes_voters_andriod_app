@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_screen_bg_color"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/toolbar_heading" />
+
+        <com.yesvoters.android.customview.RobotoRegularTextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:text="@string/please_verify_your_identity_text"
+            android:textColor="@color/begin_description_color"
+            android:textSize="@dimen/text_14" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:src="@drawable/begin_survey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_8">
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                style="@style/SurveyLabelText"
+                android:text="@string/surveyor_name_text" />
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                android:id="@+id/tvSurveyorName"
+                style="@style/SurveyValueText" />
+        </LinearLayout>
+
+        <View style="@style/HorizontalDivider30" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_8">
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                style="@style/SurveyLabelText"
+                android:text="@string/assigner_name_text" />
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                android:id="@+id/tvAssignerName"
+                style="@style/SurveyValueText" />
+        </LinearLayout>
+
+
+        <View style="@style/HorizontalDivider30" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_8">
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                android:id="@+id/tvDescription"
+                style="@style/SurveyValueText"
+                android:singleLine="false"
+                android:ellipsize="none" />
+        </LinearLayout>
+
+
+        <View style="@style/HorizontalDivider30" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_8">
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                style="@style/SurveyLabelText"
+                android:text="@string/surveyor_id_text" />
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                android:id="@+id/tvSurveyorId"
+                style="@style/SurveyValueText" />
+        </LinearLayout>
+
+        <View style="@style/HorizontalDivider30" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_8">
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                style="@style/SurveyLabelText"
+                android:text="@string/assign_date_time_text" />
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                android:id="@+id/tvAssignDateTime"
+                style="@style/SurveyValueText" />
+        </LinearLayout>
+
+        <View style="@style/HorizontalDivider30" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_8">
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                style="@style/SurveyLabelText"
+                android:text="@string/surveyor_time_text" />
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                android:id="@+id/tvTime"
+                style="@style/SurveyValueText" />
+        </LinearLayout>
+
+        <View style="@style/HorizontalDivider30" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_8">
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                style="@style/SurveyLabelText"
+                android:text="@string/surveyor_location_text" />
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                android:id="@+id/tvLocation"
+                style="@style/SurveyValueText" />
+        </LinearLayout>
+
+        <View style="@style/HorizontalDivider30" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/checkboxConfirmLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:gravity="top"
+            android:text="@string/i_confirm_that_i_am_at_text"
+            android:textColor="@color/app_black_color"
+            android:textSize="@dimen/text_14"
+            android:theme="@style/WhiteCheck" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_15"
+            android:src="@drawable/indicators_begin" />
+
+        <LinearLayout
+            android:id="@+id/btnStartSurvey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/button_rounded_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/mic_icon_red" />
+
+            <com.yesvoters.android.customview.RobotoMediumTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:fontFamily="sans-serif"
+                android:text="@string/start_survey_text"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_16"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_screen_bg_color"
+    tools:context=".ui.activity.LocationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_24">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_400"
+                android:layout_marginBottom="@dimen/dp_30"
+                android:src="@drawable/ic_location" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/locaton_drop_icon" />
+
+            <com.yesvoters.android.customview.RobotoSemiBoldTextView
+                android:id="@+id/tv_welcome_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:gravity="center"
+                android:text="@string/enable_location_access_text"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/text_40"
+                android:textStyle="bold" />
+
+            <com.yesvoters.android.customview.RobotoRegularTextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/we_tag_gps_coordinates_to_text"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/text_16" />
+
+            <com.yesvoters.android.customview.RobotoMediumButton
+                android:id="@+id/btnAllowGPSLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/button_rounded_border"
+                android:minWidth="@dimen/dp_0"
+                android:minHeight="@dimen/dp_0"
+                android:padding="@dimen/dp_10"
+                android:text="@string/button_text_allow_gps_access"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

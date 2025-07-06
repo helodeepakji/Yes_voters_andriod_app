@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_screen_bg_color"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/toolbar_heading" />
+
+        <com.yesvoters.android.customview.RobotoSemiBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:text="@string/basic_details"
+            android:textSize="@dimen/text_24" />
+
+        <EditText
+            android:id="@+id/etYourName"
+            style="@style/CustomEditTextStyle"
+            android:hint="@string/your_name" />
+
+        <EditText
+            android:id="@+id/etYourFatherName"
+            style="@style/CustomEditTextStyle"
+            android:hint="@string/father_name" />
+
+        <com.yesvoters.android.customview.RobotoSemiBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textSize="@dimen/text_24" />
+
+        <EditText
+            android:id="@+id/etArea"
+            style="@style/CustomEditTextStyle"
+            android:hint="@string/area_hint" />
+
+        <EditText
+            android:id="@+id/etBlock"
+            style="@style/CustomEditTextStyle"
+            android:hint="@string/block_hint" />
+
+        <EditText
+            android:id="@+id/etLandmark"
+            style="@style/CustomEditTextStyle"
+            android:hint="@string/landmark_hint" />
+
+        <EditText
+            android:id="@+id/etCity"
+            style="@style/CustomEditTextStyle"
+            android:hint="@string/city_hint" />
+
+        <EditText
+            android:id="@+id/etState"
+            style="@style/CustomEditTextStyle"
+            android:hint="@string/state_hint" />
+
+        <EditText
+            android:id="@+id/etPostalCode"
+            style="@style/CustomEditTextStyle"
+            android:inputType="number"
+            android:hint="@string/postal_code_hint" />
+
+        <com.yesvoters.android.customview.RobotoRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="@string/fill_required_fields"
+            android:textColor="#3F51B5"
+            android:textSize="@dimen/text_12" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_35"
+            android:src="@drawable/indicators_next" />
+
+        <com.yesvoters.android.customview.RobotoMediumButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@drawable/button_next_rounded_border"
+            android:minWidth="@dimen/dp_0"
+            android:minHeight="@dimen/dp_0"
+            android:padding="@dimen/dp_10"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16" />
+    </LinearLayout>
+
+</ScrollView>

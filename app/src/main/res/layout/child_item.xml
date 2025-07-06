@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/childRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:padding="@dimen/dp_12"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/childText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/checkIcon"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:text="Child Item"
+        android:textSize="@dimen/text_16"
+        android:focusable="false"
+        android:clickable="false" />
+
+    <ImageView
+        android:id="@+id/checkIcon"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_check"
+        android:visibility="gone"
+        android:focusable="false"
+        android:clickable="false" />
+</RelativeLayout>

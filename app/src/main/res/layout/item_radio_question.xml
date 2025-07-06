@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.yesvoters.android.customview.RobotoRegularTextView
+        android:id="@+id/questionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_15"
+        android:textColor="@color/app_black_color"
+        android:textSize="@dimen/text_18" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:alignItems="center"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_8"/>
+
+</LinearLayout>

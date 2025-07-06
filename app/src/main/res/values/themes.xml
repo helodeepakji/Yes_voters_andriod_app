@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.YesVotersAndroid" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
+
+    </style>
+
+    <style name="Theme.YesVotersAndroid" parent="Base.Theme.YesVotersAndroid" />
+
+    <style name="WhiteCheck">
+        <item name="buttonTint">#fff</item>
+        <item name="colorAccent">#fff</item>
+    </style>
+
+    <style name="NoPaddingInput" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="ProfileLabel">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/profile_label_color</item>
+        <item name="android:paddingLeft">2dp</item>
+    </style>
+
+    <style name="ProfileValue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black_text_color</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:clickable">false</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">2dp</item>
+    </style>
+
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="HorizontalDivider30">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:background">@color/horizontal_line_30_color</item>
+    </style>
+
+    <style name="SurveyValueText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_text_color</item>
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+
+    <style name="SurveyLabelText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/app_black_color</item>
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+
+    <style name="CustomEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/app_black_color</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:backgroundTint">@color/edittext_bottomLine_color</item>
+    </style>
+
+
+</resources>

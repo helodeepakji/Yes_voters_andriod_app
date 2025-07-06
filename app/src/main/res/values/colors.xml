@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="app_status_bar_color">#ffffff</color>
+    <color name="app_screen_bg_color">#ffffff</color>
+    <color name="black_text_color">#212121</color>
+    <color name="app_black_color">#212121</color>
+    <color name="app_blue_color">#3F51B5</color>
+    <color name="app_button_bg_color">#3F51B5</color>
+    <color name="checkbox_color">#3F51B5</color>
+    <color name="edittext_border_color">#3F51B5</color>
+    <color name="search_box_border_color">#3F51B5</color>
+    <color name="app_text_color">#3F51B5</color>
+    <color name="profile_label_color">#757575</color>
+    <color name="edittext_bottomLine_color">#757575</color>
+    <color name="begin_description_color">#757575</color>
+    <color name="screen_bg_color">#F5F5F5</color>
+    <color name="horizontal_line_30_color">#4D000000</color>
+    <color name="horizontal_line_50_color">#75757580</color>
+    <color name="horizontal_line_60_color">#75757599</color>
+    <color name="pending_color">#ffec94</color>
+    <color name="active_color">#20C626</color>
+    <color name="transparent">@android:color/transparent</color>
+
+</resources>

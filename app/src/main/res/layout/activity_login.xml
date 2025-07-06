@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_screen_bg_color"
+    tools:context=".ui.activity.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_35">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_login" />
+
+            <com.yesvoters.android.customview.RobotoSemiBoldTextView
+                android:id="@+id/tv_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:text="@string/lets_get_started_text"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/text_26"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_subheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:text="@string/login_to_take_text"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/text_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_text_email_phone"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/text_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_12">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundMode="none"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/black_text_color"
+                    app:hintEnabled="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        style="@style/NoPaddingInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_0"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_text_enter_your_password"
+                        android:inputType="textPassword"
+                        android:padding="@dimen/dp_0"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/text_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:button="@drawable/custom_checkbox_selector"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="@dimen/dp_0"
+                android:minHeight="@dimen/dp_0"
+                android:minLines="1"
+                android:paddingBottom="@dimen/dp_0"
+                android:text="@string/remember_me_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:background="@color/horizontal_line_50_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/or_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14" />
+
+                <View
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:background="@color/horizontal_line_50_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/google_button_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:src="@drawable/google_logo" />
+
+                <com.yesvoters.android.customview.RobotoRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/continue_with_google_text"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/text_16"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:button="@drawable/custom_checkbox_selector"
+                android:gravity="top"
+                android:text="@string/by_proceeding_text" />
+
+            <com.yesvoters.android.customview.RobotoMediumButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/button_rounded_border"
+                android:minWidth="@dimen/dp_0"
+                android:minHeight="@dimen/dp_0"
+                android:padding="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:text="@string/button_text_login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

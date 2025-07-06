@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Your Profile"
+        android:icon="@drawable/profile_icon" />
+
+    <item
+        android:id="@+id/nav_surveys"
+        android:title="Surveys List"
+        android:icon="@drawable/surveys_icon" />
+
+    <item
+        android:id="@+id/nav_target"
+        android:title="Target"
+        android:icon="@drawable/target_icon" />
+    <item
+        android:id="@+id/nav_log_out"
+        android:title="Log Out"
+        android:icon="@drawable/ic_log_out" />
+</menu>
